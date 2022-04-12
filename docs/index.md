@@ -1,37 +1,53 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/his027/CatVodTVJsonEditor/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/his027/CatVodTVJsonEditor/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.2.4/animate.min.css">
+        <link rel="stylesheet" href="./static/editor.css">
+        <title>猫影视TV配置编辑器</title>
+</head>
+<body>
+<div id="loading"
+     style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; background-color: #000; opacity: 0.5; z-index:9999;">
+    <center style="position: absolute; top: 50%; left: 50%; color:#fff">请稍候...</center>
+</div>
+<div class="container">
+    <div class="page-header">
+        <h3>
+            配置编辑器 &nbsp;<small>本地记录依赖浏览器缓存，清空缓存将丢失记录</small>
+        </h3>
+    </div>
+    <div class="row">
+        <div class="btn-group btn-group-sm col-md-5" role="group">
+            <button type="button" class="btn btn-success" onclick="show_visual('999999')">可视</button>
+            <button type="button" class="btn btn-info" onclick="show_code('999999')">源码</button>
+            <button type="button" class="btn btn-warning" onclick="empty_diy('999999')">清空</button>
+            <button type="button" class="btn btn-primary" onclick="save_diy('999999')">保存</button>
+        </div>
+    </div>
+    <h4></h4>
+    <form id="diy_cfg_jf_999999" style="display: none;"></form>
+    <textarea rows="30" class="form-control" id="diy_cfg_code_999999" style="margin-top: 10px; display: none;"></textarea>    
+</div>
+</body>
+<script src="//cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/bootstrap-notify@3.1.3/bootstrap-notify.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/bootbox@4.4.0/bootbox.min.js"></script>
+<script src="./static/index.js"></script>
+<script src="//cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/sytelus/CryptoJS@master/components/core-min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/sytelus/CryptoJS@master/components/cipher-core-min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/sytelus/CryptoJS@master/components/aes-min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/sytelus/CryptoJS@master/components/mode-ecb-min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js"></script>
+<script src="./static/jsonform.js"></script>
+<script src="./static/jsv.js"></script>
+<script src="./static/editor.js"></script>
+<script src="./static/jsonlint.js"></script>
+</html>
